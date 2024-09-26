@@ -1,0 +1,215 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* Same gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* Main Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 50px; /* Increased padding for more space */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 700px; /* Increased max width for a bigger box */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    color: #00796b; /* Teal color for headings */
+    margin-bottom: 25px; /* Increased bottom margin */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* Increased bottom margin */
+    color: #ff6f20; /* Orange color for contrast */
+}
+
+/* Form Elements */
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    color: #555;
+}
+
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #00796b; /* Teal focus border */
+}
+
+/* Buttons */
+input[type="submit"],
+.btn-secondary,
+.btn-primary {
+    background-color: #00796b; /* Teal background for buttons */
+    color: #fff;
+    border: none;
+    padding: 15px; /* Maintain padding for buttons */
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 20px; /* Increased top margin */
+    margin-bottom: 30px; /* Increased bottom margin */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 121, 107, 0.3); /* Button shadow for depth */
+}
+
+input[type="submit"]:hover,
+.btn-secondary:hover,
+.btn-primary:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-2px);
+}
+
+input[type="submit"]:active,
+.btn-secondary:active,
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Flash Messages */
+.flash-messages {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.flash-messages .alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Links */
+a {
+    color: #00796b; /* Teal for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Login Prompt Styles */
+.login-prompt {
+    margin-top: 20px; /* Space from the top */
+    margin-bottom: 40px; /* Space from the bottom */
+    padding: 20px; /* Padding around the prompt */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.login-prompt h2 {
+    font-size: 2rem; /* Font size for heading */
+    color: #00796b; /* Teal color for heading */
+    margin-bottom: 15px; /* Space below heading */
+    text-align: center; /* Centered text */
+}
+
+.prompt-text {
+    font-size: 1rem; /* Font size for paragraph */
+    color: #555; /* Dark gray for contrast */
+    margin-bottom: 25px; /* Space below paragraph */
+    text-align: center; /* Centered text */
+}
+
+/* Buttons within the login prompt */
+.login-prompt .btn-primary,
+.login-prompt .btn-secondary {
+    display: inline-block; /* Allow buttons to sit next to each other */
+    background-color: #00796b; /* Teal background for primary button */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    padding: 15px 20px; /* Padding for buttons */
+    font-size: 1.2rem; /* Font size for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners for buttons */
+    text-decoration: none; /* No underline */
+    text-align: center; /* Center text within buttons */
+    margin: 10px; /* Space around buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.login-prompt .btn-primary:hover {
+    background-color: #004d40; /* Darker teal on hover for primary button */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.login-prompt .btn-secondary {
+    background-color: #ed7d41; /* Orange background for secondary button */
+}
+
+.login-prompt .btn-secondary:hover {
+    background-color: #f07e45; /* Darker orange on hover for secondary button */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px; /* Adjusted padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    input[type="submit"],
+    .btn-secondary,
+    .btn-primary {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 12px; /* Adjusted padding for smaller screens */
+    }
+
+    .login-prompt h2 {
+        font-size: 1.5rem; /* Smaller font size for heading */
+    }
+
+    .prompt-text {
+        font-size: 0.9rem; /* Smaller font size for paragraph */
+    }
+
+    .login-prompt .btn-primary,
+    .login-prompt .btn-secondary {
+        font-size: 1rem; /* Smaller font size for buttons */
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+    }
+}

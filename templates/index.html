@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Screening Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Resume Screening Tool</h1>
+            
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    <ul class="flash-messages">
+                        {% for category, message in messages %}
+                            <li class="alert">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            
+            {% if 'user_id' in session %}
+                <div class="welcome-message">
+                    <h2>Welcome, {{ session['username'] }}!</h2>
+                </div>
+                
+                <form action="/screen" method="post" enctype="multipart/form-data">
+                    <label for="job_description">Job Description:</label>
+                    <textarea name="job_description" rows="5" placeholder="Enter job description here..." required></textarea>
+
+                    <label for="resumes">Upload Resumes:</label>
+                    <input type="file" name="resumes" multiple accept=".txt,.docx,.pdf" required>
+                    
+                    <input type="submit" value="Screen Resumes" class="btn-primary">
+                </form>
+                <a href="/logout" class="btn-secondary">Logout</a>
+                
+                
+                
+            {% else %}
+                <div class="login-prompt">
+                    <h2>Please Log In or Register</h2>
+                    <p class="prompt-text">To use the screening tool, you need to log in or register.</p>
+                    <a href="/login" class="btn-primary">Log In</a>
+                    <a href="/register" class="btn-secondary">Register</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Container */
+.container {
+    max-width: 600px; /* Increased max-width for a wider box */
+    width: 90%; /* Ensure responsiveness */
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+    outline: none;
+    width: 100%; /* Ensure input fields stretch across the container */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+input[type="submit"] {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Make submit button full width */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+input[type="submit"]:active {
+    background-color: #00408f;
+}
+
+/* Flash Messages */
+.alert {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Links */
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #666;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

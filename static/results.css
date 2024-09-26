@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%); /* Same gradient background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Background for Container */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Results Container */
+.container {
+    max-width: 900px; /* Increased max-width for a larger container */
+    margin: 50px auto;
+    padding: 40px; /* Increased padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+/* Title Styling */
+h1 {
+    text-align: center;
+    color: #00796b; /* Teal color for the title */
+    font-size: 3em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+thead {
+    background-color: #007bff; /* Blue for header */
+    color: white;
+}
+
+th, td {
+    padding: 15px; /* Increased padding */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em; /* Increased font size */
+    transition: background-color 0.3s ease;
+}
+
+tbody tr {
+    cursor: pointer; /* Change cursor on hover */
+}
+
+tbody tr:hover {
+    background-color: #e8f5e9; /* Light green on hover */
+}
+
+/* Links */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.5em; /* Increased font size for links */
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 30px; /* Increased margin */
+    padding: 15px 30px; /* Increased padding for the link button */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #e3f2fd; /* Light blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px; /* Adjusted padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust title size */
+    }
+
+    th, td {
+        font-size: 1em; /* Adjust table font size for smaller screens */
+    }
+
+    a {
+        font-size: 1.2em; /* Adjust link size */
+        padding: 10px 20px; /* Adjust link padding */
+    }
+}
